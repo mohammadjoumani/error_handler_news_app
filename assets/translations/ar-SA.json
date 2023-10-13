@@ -1,0 +1,17 @@
+{
+  "app_name": "Error handler",
+  "no_route_found": "لا توجد شاشه",
+  "success": "تم بنجاح",
+  "bad_request_error": "طلب غير صالح. حاول مرة أخرى لاحقًا",
+  "no_content": "success with not content",
+  "forbidden_error": "طلب محظور. حاول مرة أخرى لاحقًا",
+  "unauthorized_error": "user unauthorized, try again later",
+  "not_found_error": "url غير موجود , حاول مرة أخرى لاحقًا",
+  "conflict_error": "تم العثور على تعارض , حاول مرة أخرى لاحقًا",
+  "internal_server_error": "حدث خطأ ما , حاول مرة أخرى لاحقًا",
+  "unknown_error": "حدث خطأ ما , حاول مرة أخرى لاحقًا",
+  "timeout_error": "انتهت المهلة , حاول مرة أخرى متأخرًا",
+  "default_error": "حدث خطأ ما , حاول مرة أخرى لاحقًا",
+  "cache_error": "خطأ في ذاكرة التخزين المؤقت , حاول مرة أخرى لاحقًا",
+  "no_internet_error": "يُرجى التحقق من اتصالك بالإنترنت"
+}
