@@ -1,6 +1,6 @@
 import 'package:bloc/bloc.dart';
 import 'package:dartz/dartz.dart';
-import 'package:error_handler/data/model/dto/request/article_response_dto.dart';
+import 'package:error_handler/data/model/dto/response/article_response_dto.dart';
 import 'package:error_handler/domain/use_case/get_articles_use_case.dart';
 import 'package:meta/meta.dart';
 

@@ -1,6 +1,7 @@
 import 'package:dio/dio.dart';
 import 'package:error_handler/core/app/app.dart';
 import 'package:error_handler/core/network/failure.dart';
+import 'package:error_handler/data/model/dto/response/error_response_dto.dart';
 import 'package:error_handler/presentation/util/resources/langauge_manager.dart';
 import 'package:error_handler/presentation/util/resources/string_manager.dart';
 
@@ -27,11 +28,8 @@ Failure _handleError(DioException error) {
     case DioExceptionType.receiveTimeout:
       return DataSource.RECIEVE_TIMEOUT.getFailure();
     case DioExceptionType.badResponse:
-      if (error.response != null &&
-          error.response?.statusCode != null &&
-          error.response?.statusMessage != null) {
-        return Failure(error.response?.statusCode ?? 0,
-            error.response?.statusMessage ?? "");
+      if (error.response != null && error.response?.statusCode != null && error.response?.statusMessage != null) {
+        return Failure(error.response?.statusCode ?? 0, error.response?.data["message"] ?? "");
       } else {
         return DataSource.DEFAULT.getFailure();
       }
@@ -138,6 +136,6 @@ class ResponseMessage {
 }
 
 class ApiInternalStatus {
-  static const String SUCCESS = "ok";
-  static const String FAILURE = "error";
+  static const int SUCCESS = 200;
+  static const int FAILURE = 400;
 }

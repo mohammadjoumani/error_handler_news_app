@@ -1,4 +1,4 @@
-import 'package:error_handler/data/model/dto/request/article_response_dto.dart';
+import 'package:error_handler/data/model/dto/response/article_response_dto.dart';
 import 'package:error_handler/presentation/util/resources/asset_manger.dart';
 import 'package:error_handler/presentation/util/resources/color_manager.dart';
 import 'package:flutter/material.dart';

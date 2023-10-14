@@ -30,6 +30,7 @@ class GenericFailureMessage extends StatelessWidget {
         Text(
           message,
           style: TextStyle(fontSize: 15, color: ColorManager.colorBlack),
+          textAlign: TextAlign.center,
         )
       ],
     );
