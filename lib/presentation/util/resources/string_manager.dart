@@ -2,8 +2,7 @@ class AppStrings {
   static const strNoRouteFound = "no_route_found";
   static const strAppName = "app_name";
 
-
-  static const String success = "success";
+  static const String strSuccess = "success";
   // error handler
   static const String strBadRequestError = "bad_request_error";
   static const String strNoContent = "no_content";

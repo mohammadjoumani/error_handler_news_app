@@ -1,6 +1,6 @@
 import 'package:error_handler/core/network/api_service.dart';
 import 'package:error_handler/core/network/dio_factory.dart';
-import 'package:error_handler/core/network/netword_info.dart';
+import 'package:error_handler/core/network/network_info.dart';
 import 'package:error_handler/data/repository/repository_impl.dart';
 import 'package:error_handler/domain/repository/repository.dart';
 import 'package:error_handler/domain/use_case/get_articles_use_case.dart';
@@ -26,13 +26,13 @@ Future<void> initAppModule() async {
   // print("${GetIt.I.isRegistered<NetworkInfo>()} " + "NetworkInfo");
 
   //DioFactory instance
-  instance.registerLazySingleton<DioFactory>(() => DioFactory(instance()));
+  instance.registerLazySingleton<DioFactory>(() => DioFactory());
 
   final dio = await instance<DioFactory>().getDio();
 
   //AppServiceClient instance
-  instance.registerLazySingleton(() => ApiService(dio));
+  instance.registerLazySingleton(() => ApiService(dio, instance(), instance()));
 
-  instance.registerFactory<Repository>(() => RepositoryImpl(instance(), instance(), instance()));
+  instance.registerFactory<Repository>(() => RepositoryImpl(instance(), instance()));
   instance.registerFactory<GetArticlesUseCase>(() => GetArticlesUseCase(instance()));
 }
